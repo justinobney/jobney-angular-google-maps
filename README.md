@@ -9,3 +9,5 @@ Simple Info:
 * Google Maps API - V3
 * Infobox.js for custom info windows
 * Uses interpolation to allow for custom per marker templates and data-binding (WIN)
+
+DEMO: http://code.justinobney.com/sandbox/jobney-ng-maps/
