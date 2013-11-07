@@ -8,9 +8,9 @@
             var vm = this;
 
             vm.places = [
-                {id:1, address: '10000 Perkins Rowe Ave, Baton Rouge, LA', name: "Envoc (My Office)"},
-                {id:2, address: '15961 Airline Hwy, Baton Rouge, LA', name: "MMR"},
-                {id:3, address: '302 Pinoak Street, Denham Springs, LA', name: "Where I grew up"}
+                {id:1, address: '10000 Perkins Rowe Ave, Baton Rouge, LA', name: "Envoc (My Office)", logo: 'http://dl.dropboxusercontent.com/u/2857953/img/logo.png'},
+                {id:2, address: '15961 Airline Hwy, Baton Rouge, LA', name: "MMR", logo: 'http://placehold.it/380x380'},
+                {id:3, address: '302 Pinoak Street, Denham Springs, LA', name: "Where I grew up", logo: 'http://placehold.it/380x380'}
             ];
 
             vm.addPlace = function(){
