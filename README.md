@@ -34,9 +34,9 @@ Opening an info window
 // have a reference to the model attached to the marker
 var place = {id:5, props:'..'}
 
-// the mapservice keeps a list of all markers shown on the map
-// openInfoWindow takes a compare function that will be given each
-// marker to compare against. The first true result will be the marker used
+// The mapservice keeps a list of all markers shown on the map.
+// OpenInfoWindow takes a compare function that will be given each
+// marker to compare against. The first true result will be the marker used.
 MapService.openMarkerInfo(function(marker){
     return marker.model.id == place.id;
 })
