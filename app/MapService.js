@@ -12,6 +12,7 @@
             var myMarkers = [];
             var google = window.google;
             var geoCache = {};
+            var defaultAnimation = google.maps.Animation.DROP
 
             service.openMarkerInfo = function(fnFindMarker) {
                 if (!myMarkers.length)
@@ -38,7 +39,7 @@
                     service.clearMap();
 
                 angular.forEach(points, function(value) {
-                    var marker = service.createGenericMarker(value[0], null, google.maps.Animation.DROP);
+                    var marker = service.createMarker(value[0], null, google.maps.Animation.DROP);
 
                     if (options.infoBoxTemplate && value[1])
                         createInfoBox(marker, options.infoBoxTemplate, value[1]);
@@ -66,7 +67,7 @@
                 return new google.maps.LatLng(lat, lng);
             }
 
-            service.createGenericMarker = function(googleLatLng, icon, animation) {
+            service.createMarker = function(googleLatLng, icon, animation) {
                 var optMap = {
                     map: map,
                     position: googleLatLng
