@@ -1,25 +1,21 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">{{name}}</h3>
+    <h3 class="panel-title">{{name || 'Name'}}</h3>
   </div>
   <div class="col-xs-12">
   <br>
     <div class="row">
         <div class="col-md-4">
-            <img src="{{logo}}" alt="" class="img-rounded img-responsive" />
+            <img src="{{logo || 'http://placehold.it/380x380'}}" alt="" class="img-rounded img-responsive" />
         </div>
         <div class="col-md-8">
             <small>
-                <cite title="San Francisco, USA">{{address}} <i class="glyphicon glyphicon-map-marker">
-                    </i>
+                <cite title="{{address || 'Address'}}">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    {{address || 'Address'}}
                 </cite>
             </small>
-            <p>
-                <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                <br />
-                <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                <br />
-                <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+            email@example.com
         </div>
     </div>
     <br>

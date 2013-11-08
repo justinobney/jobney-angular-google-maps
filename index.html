@@ -35,20 +35,32 @@
             <!--/.nav-collapse -->
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <form role="form" ng-submit="vm.addPlace()">
-                    <h3>Add New Place</h3>
+            <form role="form" ng-submit="vm.addPlace()">
+                <div class="col-sm-3"><h3>Select Template</h3></div>
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" ng-model="vm.newPlaceName" class="form-control">
                     </div>
+                </div>
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label>Address</label>
                         <input type="text" ng-model="vm.newPlaceAddress" class="form-control">
                     </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>&nbsp;</label>
                     <button class="btn btn-primary btn-block" type="submit">Add Place</button>
-                </form>
-                <hr>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <select ng-model="vm.selectedTemplate" ng-options="v as v for (k,v) in vm.availableTemplates" class="form-control"></select>
+                <br>
+                <div ng-include="vm.selectedTemplate"></div>
+                <br>
                 <div class="panel panel-default">
                     <div class="panel-heading">Places</div>
                     <!-- List group -->

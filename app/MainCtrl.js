@@ -13,6 +13,13 @@
                 {id:3, address: '302 Pinoak Street, Denham Springs, LA', name: "Where I grew up", logo: 'http://placehold.it/380x380'}
             ];
 
+            vm.availableTemplates = [
+                'app/partials/infobox.html',
+                'app/partials/infobox2.html'
+            ];
+
+            vm.selectedTemplate = vm.availableTemplates[0];
+
             vm.addPlace = function(){
                 var place = {
                     id: vm.places.length +1,
@@ -59,11 +66,9 @@
             }
 
             function plotLocation(placeWithLocationArray) {
-                var infoboxTemplate = 'app/partials/infobox.html';
-
                 MapService.plotPoints(placeWithLocationArray, {
                     clearPrevious: false,
-                    infoBoxTemplate: infoboxTemplate
+                    infoBoxTemplate: vm.selectedTemplate
                 });
             }
         }
