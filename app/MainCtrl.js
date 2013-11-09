@@ -7,6 +7,9 @@
         function(MapService) {
             var vm = this;
 
+            vm.newPlaceName = "The White House";
+            vm.newPlaceAddress = "1600 Pennsylvania Ave NW, Washington";
+
             vm.places = [
                 {id:1, address: '10000 Perkins Rowe Ave, Baton Rouge, LA', name: "Envoc (My Office)", logo: 'http://dl.dropboxusercontent.com/u/2857953/img/logo.png'},
                 {id:2, address: '15961 Airline Hwy, Baton Rouge, LA', name: "MMR", logo: 'http://placehold.it/380x380'},
@@ -18,7 +21,7 @@
                 'app/partials/infobox2.html'
             ];
 
-            vm.selectedTemplate = vm.availableTemplates[0];
+            vm.selectedTemplate = vm.availableTemplates[1];
 
             vm.addPlace = function(){
                 var place = {
@@ -35,6 +38,9 @@
                 });
 
                 vm.places.push(place);
+
+                vm.newPlaceName = "";
+                vm.newPlaceAddress = "";
             }
 
             vm.showPlace = function(place){

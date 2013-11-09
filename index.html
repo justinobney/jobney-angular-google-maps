@@ -10,7 +10,7 @@
     </script>
     <link href="css/style.css" rel="stylesheet" />
     <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.0/angular.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </head>
 
@@ -36,7 +36,12 @@
         </div>
         <div class="row">
             <form role="form" ng-submit="vm.addPlace()">
-                <div class="col-sm-3"><h3>Select Template</h3></div>
+                <div class="col-sm-3">
+                    <h3>Select Template</h3>
+                    <small>
+                        Applied to new markers.. Need to work on using $compile? for dynamic info-window switching
+                    </small>
+                </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label>Name</label>
