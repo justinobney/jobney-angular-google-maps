@@ -23,7 +23,7 @@ var arrayOfLocationsWithModels = [
     [location, model]
 ]
 
-MapService.plotPoints(placeWithLocationArray, {
+MapService.plotPoints(arrayOfLocationsWithModels, {
     clearPrevious: false,
     infoBoxTemplate: infoboxTemplate
 });
@@ -35,7 +35,7 @@ Opening an info window
 var place = {id:5, props:'..'}
 
 // The mapservice keeps a list of all markers shown on the map.
-// OpenInfoWindow takes a compare function that will be given each
+// openMarkerInfo takes a compare function that will be given each
 // marker to compare against. The first true result will be the marker used.
 MapService.openMarkerInfo(function(marker){
     return marker.model.id == place.id;
